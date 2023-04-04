@@ -1,0 +1,35 @@
+<head>
+	<link rel = "stylesheet"
+   type = "text/css"
+   href = "../addStyle.css" />
+</head>
+<h3>{{viewTitle}}</h3>
+<form action="/itemList" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{itemList._id}}">
+	<div class="form-group">
+		Item_ID:<br>
+		<input type="numbers" class= "form-control" name="item_id" placeholder = "Item_ID" value="{{itemList.item_id}}" required="required" pattern="{1,20}">
+		<br>
+	</div>
+	<div class="form-group">
+		List_ID:<br>
+		<input type="numbers" class= "form-control" name="list_id" placeholder = "List_ID" value="{{itemList.list_id}}" required="required" pattern="{1,20}">
+		<br>
+	</div>
+	<div class="form-group">
+		History_ID:<br>
+		<input type="numbers" class= "form-control" name="history_id" placeholder = "History_ID" value="{{itemList.history_id}}" required="required" pattern="{1,20}">
+		<br>
+	</div>
+	<div class="form-group">
+		Amount:<br>
+		<input type="numbers" class= "form-control" name="amount" placeholder = "Amount" value="{{itemList.amount}}" required="required" pattern="{1,20}">
+		<br>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+		<button type="reset" class= "btn btn-info">Reset</button>
+		<button type="view" class="btn btn-info"><a  href="/itemList/list"><i class="fa fa-list-alt"></i>View All</a> </button>
+		<button type="menu" class="btn btn-info"><a  href="/menu"><i class="fa fa-list-alt"></i>Menu</a> </button>
+	</div>
+</form>

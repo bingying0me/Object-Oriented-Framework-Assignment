@@ -1,0 +1,30 @@
+<head>
+	<link rel = "stylesheet"
+   type = "text/css"
+   href = "../addStyle.css" />
+</head>
+<h3>{{viewTitle}}</h3>
+<form action="/item" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{item._id}}">
+	<div class="form-group">
+		Item_ID:<br>
+		<input type="numbers" class= "form-control" name="item_id" placeholder = "Item_ID" value="{{item.item_id}}" required="required" pattern="{1,20}">
+		<br>
+	</div>
+	<div class="form-group">
+		Item name:<br>
+		<input type="text" class= "form-control" name="item_name" placeholder = "Item Name" value="{{item.item_name}}" required="required" pattern="[A-z]{1,20}" title="Please enter the name of not more than 20 words.">
+		<br>
+	</div>
+	<div class="form-group">
+		Price:<br>
+		<input type="numbers" class= "form-control" name="price" placeholder = "Price" value="{{item.price}}" required="required" pattern="{1,20}">
+		<br><br>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+		<button type="reset" class= "btn btn-info">Reset</button>
+		<button type="view" class="btn btn-info"><a  href="/item/list"><i class="fa fa-list-alt"></i>View All</a> </button>
+		<button type="menu" class="btn btn-info"><a  href="/menu"><i class="fa fa-list-alt"></i>Menu</a> </button>
+	</div>
+</form>

@@ -1,0 +1,41 @@
+<head>
+	<link rel = "stylesheet"
+   type = "text/css"
+   href = "../addStyle.css" />
+</head>
+
+<h3>{{viewTitle}}</h3>
+<form action="/membership" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{membership._id}}">
+	<div class="form-group">
+		Member_ID:<br>
+		<input type="numbers" class= form-control" name="member_id" placeholder = "Member_ID" value="{{membership.member_id}}" required="required" pattern="{1,20}">
+		<br>
+	</div>
+	<div class="form-group">
+		Level_ID:<br>
+		<input type="numbers" class= form-control" name="level_id" placeholder = "Level_ID" value="{{membership.level_id}}" required="required" pattern="{1,20}">
+		<br>
+	</div>
+	<div class="form-group">
+		Start Date:<br>
+		<input type="date" class= form-control" name="start_date" placeholder = "Start Date" value="{{membership.start_date}}" required="required">
+		<br>
+	</div>
+	<div class="form-group">
+		Expiry Date:<br>
+		<input type="date" class= form-control" name="expiry_date" placeholder = "Expiry Date" value="{{membership.expiry_date}}" required="required">
+		<br>
+	</div>
+	<div class="form-group">
+		Stat:<br>
+		<input type="stat" class= form-control" name="stat" value="{{membership.stat}}" placeholder = "Stat" pattern="[A-z0-9]{1,100}">
+		<br><br>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+		<button type="reset" class= "btn btn-info">Reset</button>
+		<button type="view" class="btn btn-info"><a  href="/membership/list"><i class="fa fa-list-alt"></i>View All</a> </button>
+		<button type="menu" class="btn btn-info"><a  href="/menu"><i class="fa fa-list-alt"></i>Menu</a> </button>
+	</div>
+</form> 

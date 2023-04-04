@@ -1,0 +1,31 @@
+<head>
+	<link rel = "stylesheet"
+   type = "text/css"
+   href = "../listStyle.css" />
+</head>
+
+<h3> Level List</h3>
+<button type="create" class="btn btn-secondary"><a  href="/level"><i class="fa fa-plus"></i>Create New Level</a></button><br>
+<table class table table-striped>
+<thead>
+<tr>
+<th>Level ID</th>
+<th>Level Name</th>
+<th>Rate of Discount</th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{{#each list}}
+<tr>
+<td>{{this.level_id}}</td>
+<td>{{this.level_name}}</td>
+<td>{{this.discount_rate}}</td>
+<td><button type="button" value="Delete"><a href="/level/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record?');">Delete</button></td>
+<td><button type="button" value="Edit"><a href="/level/{{this._id}}">Edit</button></td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+<button type="menu" class="btn btn-info"><a  href="/menu"><i class="fa fa-list-alt"></i>Menu</a> </button>

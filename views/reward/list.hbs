@@ -1,0 +1,28 @@
+<head>
+	<link rel = "stylesheet"
+   type = "text/css"
+   href = "../listStyle.css" />
+</head>
+
+<h3>Reward List</h3>
+<table class table table-striped>
+<thead>
+<tr>
+<th>Member ID</th>
+<th>Reward ID</th>
+<th>Reward Amount</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{{#each list}}
+<tr>
+<td>{{this.member_id}}</td>
+<td>{{this.reward_id}}</td>
+<td>{{this.reward_amount}}</td>
+<td><button type="button" value="Edit"><a href="/reward/{{this._id}}">Edit</button></td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+<button type="menu" class="btn btn-info"><a  href="/menu"><i class="fa fa-list-alt"></i>Menu</a> </button>

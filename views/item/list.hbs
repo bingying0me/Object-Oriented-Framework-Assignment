@@ -1,0 +1,30 @@
+<head>
+	<link rel = "stylesheet"
+   type = "text/css"
+   href = "../listStyle.css" />
+</head>
+<h1>Item</h1>
+<button type="create" class="btn btn-secondary"><a  href="/item"><i class="fa fa-plus"></i>Create New Item</a></button> <br>
+<table class table table-striped>
+<thead>
+<tr>
+<th>Item ID</th>
+<th>Item Name</th>
+<th>Item Price</th>
+<th> </th>
+<th> </th>
+</tr>
+</thead>
+<tbody>
+{{#each list}}
+<tr>
+<td>{{this.item_id}}</td>
+<td>{{this.item_name}}</td>
+<td>{{this.price}}</td>
+<td><button type="button" value="Delete"><a href="/item/delete/{{this._id}}" onclick="return confirm('Are you sure to delete this record?');">Delete</button></td>
+<td><button type="button" value="Edit"><a href="/item/{{this._id}}">Edit</button></td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+<button type="menu" class="btn btn-info"><a  href="/menu"><i class="fa fa-list-alt"></i>Menu</a> </button>

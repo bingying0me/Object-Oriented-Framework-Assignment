@@ -1,0 +1,30 @@
+<head>
+	<link rel = "stylesheet"
+   type = "text/css"
+   href = "../listStyle.css" />
+</head>
+
+<h3>Item List</h3>
+<table class table table-striped>
+<thead>
+<tr>
+<th>Item ID</th>
+<th>List ID</th>
+<th>History Id</th>
+<th>Amount</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+{{#each list}}
+<tr>
+<td>{{this.item_id}}</td>
+<td>{{this.list_id}}</td>
+<td>{{this.history_id}}</td>
+<td>{{this.amount}}</td>
+<td><button type="button" value="Edit"><a href="/itemList/{{this._id}}">Edit</button></td>
+</tr>
+{{/each}}
+</tbody>
+</table>
+<button type="menu" class="btn btn-info"><a  href="/menu"><i class="fa fa-list-alt"></i>Menu</a> </button>

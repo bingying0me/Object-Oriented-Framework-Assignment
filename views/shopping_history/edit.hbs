@@ -1,0 +1,31 @@
+<head>
+	<link rel = "stylesheet"
+   type = "text/css"
+   href = "../addStyle.css" />
+</head>
+
+<h3>{{viewTitle}}</h3>
+<form action="/shopping_history" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{shopping_history._id}}">
+	<div class="form-group">
+		History_ID:<br>
+		<input type="numbers" class= "form-control" name="history_id" placeholder = "History_ID" value="{{shopping_history.history_id}}" required="required" pattern="{1,20}">
+		<br>
+	</div>
+	<div class="form-group">
+		Member_ID:<br>
+		<input type="numbers" class= "form-control" name="member_id" placeholder = "Member_ID" value="{{shopping_history.member_id}}" required="required" pattern="{1,20}">
+		<br>
+	</div>
+	<div class="form-group">
+		Shopping History:<br>
+		<input type="numbers" class= "form-control" name="purchase_time" placeholder = "Purchase Time" value="{{shopping_history.purchase_time}}" required="required" pattern="{1,20}">
+		<br><br>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+		<button type="reset" class= "btn btn-info">Reset</button>
+		<button type="view" class="btn btn-info"><a  href="/shopping_history/list"><i class="fa fa-list-alt"></i>View All</a> </button>
+		<button type="menu" class="btn btn-info"><a  href="/menu"><i class="fa fa-list-alt"></i>Menu</a> </button>
+	</div>
+</form>

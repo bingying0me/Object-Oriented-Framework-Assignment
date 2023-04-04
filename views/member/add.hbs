@@ -1,0 +1,52 @@
+<head>
+	<link rel = "stylesheet"
+   type = "text/css"
+   href = "../addStyle.css" />
+</head>
+
+<h3>{{viewTitle}}</h3>
+<form action="/member" method="POST" autocomplete="off">
+<input type="hidden" name="_id" value="{{member._id}}">
+	<div class="form-group">
+		Member_ID:<br>
+		<input type="numbers" class= "form-control" name="member_id" placeholder = "Member_ID" value="{{member.member_id}}" required="required" pattern="{1,20}">
+		<br>
+	</div>
+	<div class="form-group">
+		First name:<br>
+		<input type="text" class= "form-control" name="firstname" placeholder = "First Name" value="{{member.firstname}}" required="required" pattern="[A-z]{1,20}" title="Please enter the name of not more than 20 words.">
+		<br>
+	</div>
+	<div class="form-group">
+		Last name:<br>
+		<input type="text" class= "form-control" name="lastname"  placeholder = "Last Name" value="{{member.lastname}}" required="required" pattern="[A-z]{1,20}" title="Please enter the name of not more than 20 words.">
+		<br>
+	</div>
+	<div class="form-group">
+		Gender:<br>
+		<INPUT style="width:5%; " TYPE="Radio" class= "form-control" Name="gender" placeholder = "Gender" value="{{member.gender}}" Value="Male" Checked>Male <br>
+		<INPUT style="width:5%; " TYPE="Radio" class= "form-control" Name="gender" placeholder = "Gender" value="{{member.gender}}" Value="Female">Female
+		<br>
+	</div>
+	<div class="form-group">
+		Date of Birth:<br>
+		<input type="date" class= "form-control" name="birthdate" placeholder = "Birth" value="{{member.birthdate}}" required="required">
+		<br>
+	</div>
+	<div class="form-group">
+		Phone No.:<br>
+		<input type="text" class= "form-control" name="phone" value="{{member.phone}}" placeholder = "Phone" pattern="[0-9]{1,11}" title="Please enter the phone no. of not more than 11 numbers.">
+		<br>
+	</div>
+	<div class="form-group">
+		Email:<br>
+		<input type="email" class= "form-control" name="email" value="{{member.email}}" placeholder = "Email" pattern="[A-z0-9@.]{1,100}" title="Please enter the email of not more than 50 strings.">
+		<br><br>
+	</div>
+	<div class="form-group">
+		<button type="submit" class="btn btn-info"><i class="fa fa-database"></i>Submit</button>
+		<button type="reset" class= "btn btn-info">Reset</button>
+		<button type="view" class="btn btn-info"><a  href="/member/list"><i class="fa fa-list-alt"></i>View All</a> </button>
+		<button type="menu" class="btn btn-info"><a  href="/menu"><i class="fa fa-list-alt"></i>Menu</a> </button>
+	</div>
+</form>
